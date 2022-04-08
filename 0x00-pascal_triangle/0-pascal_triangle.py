@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
 '''
-a function `pascal_triangle(n)` that 
+a function `pascal_triangle(n)` that
 returns a list of lists of integers representing
 the Pascal’s triangle of size n
 
 '''
+
 
 def pascal_triangle(n):
     ''' pascal's triangle '''
@@ -16,8 +17,11 @@ def pascal_triangle(n):
     result = [1]
     y = [0]
     for i in range(n):
-        result=[strip(left+right) for left,right in zip(result+y, y+result)]
+        str_list = [str(i).strip() for i in result]
+        print(str_list)
+        result = [left+right for left, right in zip(result+y, y+result)]
     return result
+
 
 if __name__ == '__main__':
 
