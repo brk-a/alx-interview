@@ -16,8 +16,7 @@ def pascal_triangle(n):
     result = [1]
     y = [0]
     for i in range(n):
-        print(result)
-        result=[left+right for left,right in zip(result+y, y+result)]
+        result=[strip(left+right) for left,right in zip(result+y, y+result)]
     return result
 
 if __name__ == '__main__':
