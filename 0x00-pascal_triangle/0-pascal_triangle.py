@@ -15,7 +15,7 @@ def pascal_triangle(n):
         return result
     result = [1]
     y = [0]
-    for str(i) in range(n):
+    for i in range(n):
         result=[strip(left+right) for left,right in zip(result+y, y+result)]
     return result
 
