@@ -21,8 +21,8 @@ You are only allowed to import the sys module
 '''
 
 
-print_board(board, n):
-    """prints allocated possitions to the queen"""
+def print_board(board, n):
+    """prints allocated positions to the queen"""
     b = []
 
     for i in range(n):
