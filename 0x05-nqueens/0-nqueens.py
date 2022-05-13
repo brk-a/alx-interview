@@ -20,6 +20,8 @@ You don’t have to print the solutions in a specific order
 You are only allowed to import the sys module
 '''
 
+import sys
+
 
 def print_board(board, n):
     """prints allocated positions to the queen"""
