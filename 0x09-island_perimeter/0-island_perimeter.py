@@ -19,7 +19,16 @@ connected to the water surrounding the island).
 
 def island_perimeter(grid):
     ''' return perimeter of an island '''
-    pass
+    '''new = []
+    for i in grid:
+        for j in i:
+            if j == 1:
+                new.append(j)
+                '''
+    new = [j for i in  grid for j in i if j == 1]
+    perimeter = 2 + 2 * len(new)
+
+    return perimeter
 
 
 if __name__ == '__main__':
