@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 '''
 Maria and Ben are playing a game. Given a set of consecutive integers
 starting from 1 up to and including n, they take turns choosing a prime
@@ -5,7 +7,7 @@ number from the set and removing that number and its multiples from the set.
 The player that cannot make a move loses the game.
 
 They play x rounds of the game, where n may be different for each round.
-Assuming Maria always goes first and both players playoptimally,
+Assuming Maria always goes first and both players play optimally,
 determine who the winner of each game is.
 
 Prototype: def isWinner(x, nums)
@@ -38,9 +40,24 @@ Ben wins because there are no prime numbers for Maria to choose
 Result: Ben has the most wins
 '''
 
+
 def isWinner(x, nums):
-    """prime game. return win"""
-    pass
+    """ return winner else None """
+    prime = 0
+    not_prime = 0
+    if nums and x > 0:
+        for i in nums:
+            if i > 0:
+                if i % 2 == 0:
+                    prime += 1
+                else:
+                    not_prime += 1
+        if prime >= not_prime:
+            return "Maria"
+        else:
+            return "Ben"
+    else:
+        return None
 
 
 if __name__ == '__main__':
